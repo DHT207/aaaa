@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Thực Hành CSS</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Inline CSS ví dụ cho tiêu đề chính -->
+    <style>
+        .main-heading {
+            text-align: center;
+            color: #1a73e8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="main-heading" style="font-size: 28px;">BÀI TẬP THỰC HÀNH CSS</h1>
+
+    <!-- BÀI 1: THÔNG TIN CÁ NHÂN + DANH SÁCH SỞ THÍCH -->
+    <section class="section-card">
+        <h2>Bài 1: Thông tin cá nhân & Sở thích</h2>
+        <div class="profile-card">
+            <!-- Ảnh đại diện dạng hình tròn -->
+            <img src="avatar.jpg" alt="Ảnh đại diện" class="avatar">
+            <div class="profile-info">
+                <h3>Dương Hoàng Tâm</h3>
+                <p>Mã sinh viên: 251020901253</p>
+                <p>Lớp: An Toàn Thông tin</p>
+                
+                <h4>Danh sách sở thích:</h4>
+                <ul class="hobby-list">
+                    <li>Đọc sách lập trình</li>
+                    <li>Chơi bóng đá</li>
+                    <li>Nghe nhạc và xem phim</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- BÀI 2: TẠO BẢNG ĐIỂM SINH VIÊN -->
+    <section class="section-card">
+        <h2>Bài 2: Bảng điểm sinh viên</h2>
+        <div class="table-container">
+            <!-- Nhãn "BẢNG ĐIỂM" ở góc trên bên phải -->
+            <div class="table-badge">BẢNG ĐIỂM</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Môn học</th>
+                        <th>Số tín chỉ</th>
+                        <th>Điểm tổng kết</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Lập trình C++</td>
+                        <td>3</td>
+                        <td>8.5</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Cơ sở dữ liệu</td>
+                        <td>3</td>
+                        <td>9.0</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Triết học Mác - Lênin</td>
+                        <td>2</td>
+                        <td>7.5</td>
+                    </tr>
+                    <tr class="average-row">
+                        <td colspan="3">Điểm Trung Bình Chung (GPA)</td>
+                        <td>8.33</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- BÀI 3: FORM ĐĂNG KÝ SINH VIÊN -->
+    <section class="section-card">
+        <h2>Bài 3: Form đăng ký sinh viên</h2>
+        <div class="form-container">
+            <form>
+                <!-- Họ tên và Email trên cùng một hàng khi màn hình đủ rộng -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullname">Họ và tên:</label>
+                        <input type="text" id="fullname" placeholder="Nhập họ và tên...">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Nhập địa chỉ email...">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Giới tính:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male"> Nam</label>
+                        <label><input type="radio" name="gender" value="female"> Nữ</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Sở thích cá nhân:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" value="sport"> Thể thao</label>
+                        <label><input type="checkbox" value="music"> Âm nhạc</label>
+                        <label><input type="checkbox" value="travel"> Du lịch</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Đăng Ký</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
