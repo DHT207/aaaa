@@ -1,0 +1,234 @@
+/* --- CÀI ĐẶT CHUNG & FONT, TEXT, COLOR --- */
+body {
+    font-family: 'Arial', sans-serif; /* Font-family chung */
+    font-size: 16px;                  /* Font-size */
+    font-weight: normal;              /* Font-weight */
+    font-style: normal;               /* Font-style */
+    color: #333333;                   /* Màu chữ chính (Màu tên / HEX) */
+    background-color: #f4f6f9;        /* Background color trang bằng màu HEX */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    margin-top: 40px;
+}
+
+.section-card {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- BÀI 1: PROFILE CARD & SELECTOR --- */
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;           /* Bo góc border-radius */
+    background: linear-gradient(135deg, #ffffff, #f9f9f9); /* Linear gradient background */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Tạo bóng đổ box-shadow */
+    max-width: 600px;
+}
+
+/* Ảnh đại diện hình tròn */
+.profile-card .avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+}
+
+.profile-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    color: rgb(41, 128, 185); /* Sử dụng màu RGB */
+}
+
+/* CSS List: Thay đổi kiểu dấu đầu dòng & khoảng cách */
+.hobby-list {
+    list-style-type: square; /* Thay đổi kiểu dấu đầu dòng */
+    padding-left: 20px;
+}
+
+.hobby-list li {
+    margin-bottom: 8px;      /* Điều chỉnh khoảng cách giữa các mục */
+    transition: color 0.3s ease;
+}
+
+/* Pseudo-class: Đổi màu khi di chuột vào từng mục sở thích */
+.hobby-list li:hover {
+    color: #e74c3c;
+    cursor: pointer;
+}
+
+
+/* --- BÀI 2: TẠO BẢNG ĐIỂM SINH VIÊN --- */
+.table-container {
+    position: relative; /* Dùng position: relative cho khung chứa bảng */
+    max-width: 750px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+/* Nhãn BẢNG ĐIỂM dùng position: absolute */
+.table-badge {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+table {
+    width: 100%;             /* Thiết lập chiều rộng bảng bằng % */
+    max-width: 100%;         /* Giới hạn chiều rộng tối đa */
+    margin: 20px auto;       /* Căn giữa bảng dùng margin: auto */
+    border-collapse: collapse; /* Định dạng bảng collapse */
+    background: #ffffff;
+}
+
+th, td {
+    padding: 12px 15px;      /* Thiết lập padding cho các ô */
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Căn giữa nội dung cột STT (cột 1) và Điểm (cột 4) */
+th:nth-child(1), td:nth-child(1),
+th:nth-child(4), td:nth-child(4) {
+    text-align: center;
+}
+
+/* Dòng tiêu đề có màu nền khác */
+th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+/* Dòng chẵn và lẻ có màu nền xen kẽ (nth-child) */
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Dòng được di chuột vào thay đổi màu nền */
+tbody tr:hover {
+    background-color: #eaeded;
+}
+
+/* Dòng Điểm trung bình in đậm và có màu nền riêng */
+.average-row {
+    background-color: #fcf3cf !important;
+    font-weight: bold;
+    color: #b7950b;
+}
+
+
+/* --- BÀI 3: FORM ĐĂNG KÝ SINH VIÊN & FLEXBOX --- */
+.form-container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Sử dụng Flexbox để bố trí giao diện form cân giữa theo chiều ngang */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* Form được căn giữa theo chiều ngang */
+    width: 100%;
+}
+
+/* Họ tên và Email nằm trên cùng một hàng khi màn hình đủ rộng */
+.form-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Các ô nhập liệu có chiều rộng thông nhất, bo góc border-radius */
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;       /* Bo góc */
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Thay đổi màu viền khi người dùng chọn một ô nhập liệu (:focus) */
+.form-group input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Radio và Checkbox được sắp xếp theo hàng ngang */
+.radio-group, .checkbox-group {
+    display: flex;
+    gap: 25px;
+    margin-top: 5px;
+}
+
+.radio-group label, .checkbox-group label {
+    font-weight: normal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Nút Đăng ký và hiệu ứng :hover để thay đổi giao diện nút */
+.submit-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+/* Pseudo-class hover cho nút */
+.submit-btn:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
